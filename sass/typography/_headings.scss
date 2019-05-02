@@ -1,0 +1,51 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	padding: 0;
+	letter-spacing: -.01em;
+	line-height: 1.4;
+	font-weight: 800;
+}
+
+h1 {
+
+	font-size: 2rem;
+
+	@media screen and (min-width: $breakpoint__desktop) {
+		font-size: 4rem;
+	}
+}
+
+header h1 {
+	color: $color__text-negative;
+	font-weight: 300;
+	position: relative;
+	z-index: 1;
+	letter-spacing: -.01em;
+	line-height: 1.35;
+	padding: 0;
+	margin: 2.5em 0 1.5em 0;
+
+	& strong {
+		font-weight: 800;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		width: $spacing__blockpadding;
+		height: $spacing__blockpadding;
+		background-color: $color__brand-orange;
+		position: relative;
+		left: -$spacing__blockpadding;
+	}
+}
+
+h5 {
+	color: $color__link;
+	margin-bottom: -1em;
+}
+
+h6 {
+	font-size: 1rem;
+	margin: 0 0 -.5rem 0;
+}

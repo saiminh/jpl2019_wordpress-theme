@@ -1,0 +1,61 @@
+a {
+	color: $color__link;
+	text-decoration: none;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+p > a {
+	font-style: italic;
+}
+
+h5 a {
+	text-decoration: none;
+
+	&:visited,
+	&:focus,
+	&:active {
+		color: $color__link;
+	}
+}
+
+.wp-block-button {
+	padding: 0;
+}
+
+.wp-block-button__link {
+	background-color: $color__background-button;
+	color: $color__text-main;
+	font-weight: 900;
+	border-bottom: 3px solid $color__link;
+	border-radius: 0;
+	padding: 0;
+	letter-spacing: -.02em;
+
+	.has-blue-background-color & {
+		color: $color__text-negative;
+	}
+}
+
+.wp-block-button__link:active, 
+.wp-block-button__link:focus {
+	color: $color__link-visited;
+}
+
+.wp-block-button__link:hover {
+	color: $color__link-hover;
+}

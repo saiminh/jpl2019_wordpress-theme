@@ -1,0 +1,36 @@
+.entry-header {
+	position: relative;
+	background-color: $color__brand-blue;
+	overflow: hidden;
+	background-size: cover;
+	background-position: 50% 50%;
+
+	& .entry-title {
+		position: relative;
+		color: $color__text-negative;
+	}
+}
+
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 ;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 0 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}

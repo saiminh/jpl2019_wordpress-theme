@@ -1,0 +1,5 @@
+.editor-block-list__block-edit .editor-explanation:after {
+	border-bottom: 4px solid black;
+	font-style: italic;
+	content:'End negative color area' ;
+}

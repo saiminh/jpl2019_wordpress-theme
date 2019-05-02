@@ -1,0 +1,20 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	font-weight: 300;
+	@include font-size(1);
+	line-height: $font__line-height-body;
+
+	@media screen and (min-width: $breakpoint__desktop){
+		@include font-size(1.25);
+	}
+}
+
+@import "headings";
+
+@import "copy";

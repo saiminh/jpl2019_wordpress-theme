@@ -1,0 +1,5 @@
+.editor-block-list__block-edit .negative-block:after {
+	border-top: 4px solid black;
+	font-style: italic;
+	content:'Begin negative color area' ;
+}
