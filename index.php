@@ -23,12 +23,16 @@ get_header();
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+				<!-- <header class="wp-block-blogheader alignfull has-blue-background-color">
+					<div class="wp-block-blogheader-wrapper">
+						<h1 class="page-title"><?php single_post_title(); ?></h1>
+					</div>
+				</header> -->
 				<?php
 			endif;
-
+			?>
+			<div class="articles-list">
+			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -50,7 +54,7 @@ get_header();
 
 		endif;
 		?>
-
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

@@ -642,7 +642,7 @@ header[class$="-background-color"] {
     box-sizing: border-box;
     width: calc(100% - 2rem);
     max-width: 90rem; }
-    @media screen and (min-width: 600px) and (max-width: 90rem) {
+    @media screen and (min-width: 600px) and (max-width: 94rem) {
       [class^="wp-block"].alignfull > [class^="wp-block"],
       .entry-content > .wp-block-mkl-section-block.alignfull > [class^="wp-block"] {
         width: 90%; } }
@@ -651,17 +651,24 @@ header[class$="-background-color"] {
 .entry-content > .wp-block-mkl-section-block.alignfull .wp-block-columns {
   width: 100%;
   max-width: 90rem; }
-  @media screen and (min-width: 600px) and (max-width: 90rem) {
+  @media screen and (min-width: 600px) and (max-width: 94rem) {
     [class^="wp-block"].alignfull .wp-block-columns,
     .entry-content > .wp-block-mkl-section-block.alignfull .wp-block-columns {
-      width: calc(90% + 2rem); } }
-  [class^="wp-block"].alignfull .wp-block-columns .wp-block-column,
-  .entry-content > .wp-block-mkl-section-block.alignfull .wp-block-columns .wp-block-column {
-    padding: 0; }
+      width: calc(90%); } }
+  @media (max-width: 599px) {
+    [class^="wp-block"].alignfull .wp-block-columns .wp-block-column,
+    .entry-content > .wp-block-mkl-section-block.alignfull .wp-block-columns .wp-block-column {
+      margin-right: 1rem;
+      margin-left: 1rem; } }
 
 @media (min-width: 600px) {
-  .wp-block-column {
-    flex-basis: 50%;
+  .has-2-columns .wp-block-column {
+    flex-basis: calc(50% - 2rem);
+    flex-grow: 1;
+    position: relative; }
+
+  .has-3-columns .wp-block-column {
+    flex-basis: calc(33.3333% - 2rem);
     flex-grow: 1;
     position: relative; } }
 @media (min-width: 600px) {
@@ -738,7 +745,7 @@ header[class$="-background-color"] {
     margin: 0 auto;
     width: 100%;
     max-width: calc(90rem + 2rem); }
-    @media screen and (min-width: 600px) and (max-width: 90rem) {
+    @media screen and (min-width: 600px) and (max-width: 94rem) {
       .widget-area > div, .widget-area > section,
       .site-footer > div,
       .site-footer > section {
@@ -751,26 +758,64 @@ header[class$="-background-color"] {
   text-align: left; }
 
 .blog .site-content {
-  padding-top: 10rem; }
+  padding-top: 5rem; }
 .blog .entry-header {
   background-color: transparent; }
-.blog .site-main {
+.blog .entry-header_thumbnail {
+  display: block;
+  height: 250px;
+  background-color: #DDD;
+  background-size: cover;
   width: 100%;
-  max-width: 90rem;
+  overflow: hidden;
+  position: relative; }
+.blog .articles-list {
+  width: 100%;
+  max-width: 92rem;
   margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem; }
+  margin-right: auto; }
+  .blog .articles-list article {
+    margin: 1rem;
+    background-color: #EEE; }
+    .blog .articles-list article .entry-meta, .blog .articles-list article .entry-title, .blog .articles-list article .entry-content, .blog .articles-list article .entry-footer {
+      margin: 1rem; }
+    .blog .articles-list article .entry-meta, .blog .articles-list article .entry-content, .blog .articles-list article .entry-footer {
+      font-size: 1rem; }
+    .blog .articles-list article .entry-title {
+      font-size: 1.5rem;
+      margin-bottom: 0; }
+      .blog .articles-list article .entry-title a {
+        color: #000000; }
+    .blog .articles-list article .entry-footer {
+      display: none; }
   @media screen and (min-width: 600px) {
-    .blog .site-main {
+    .blog .articles-list {
       display: flex;
-      flex-wrap: wrap; } }
+      flex-wrap: wrap; }
+      .blog .articles-list article {
+        flex-basis: calc(33.3333% - 3rem);
+        flex-grow: 1;
+        position: relative; }
+        .blog .articles-list article .entry-meta, .blog .articles-list article .entry-title, .blog .articles-list article .entry-content, .blog .articles-list article .entry-footer {
+          margin: 1rem 2rem 0.5rem 2rem; }
+      .blog .articles-list article:first-child {
+        flex-basis: calc(66.6% - 3rem);
+        background-color: #0B3861;
+        color: #FFFFFF; }
+        .blog .articles-list article:first-child a, .blog .articles-list article:first-child a:visited {
+          color: #F9A870; }
+        .blog .articles-list article:first-child .entry-title {
+          font-size: 3rem;
+          font-weight: 800; }
+          .blog .articles-list article:first-child .entry-title a {
+            color: #FFFFFF; }
+        .blog .articles-list article:first-child .entry-header_thumbnail {
+          height: 500px; }
+      .blog .articles-list article:nth-child(2) .entry-header_thumbnail {
+        height: 500px; } }
   @media screen and (min-width: 600px) and (max-width: 90rem) {
-    .blog .site-main {
-      width: 90%; } }
-  .blog .site-main article {
-    flex-basis: 33.3333%;
-    flex-grow: 1; }
+    .blog .articles-list {
+      width: calc(90% + 2rem); } }
 
 .single .entry-title,
 .single .entry-meta,
@@ -782,9 +827,17 @@ header[class$="-background-color"] {
   width: 100%;
   max-width: 90rem;
   margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem; }
+  margin-right: auto; }
+  @media screen and (max-width: 599px) {
+    .single .entry-title,
+    .single .entry-meta,
+    .single .entry-content,
+    .single .entry-footer,
+    .single .post-navigation,
+    .single .comments-area,
+    .single .nav-links {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
   @media screen and (min-width: 600px) and (max-width: 90rem) {
     .single .entry-title,
     .single .entry-meta,
@@ -794,8 +847,18 @@ header[class$="-background-color"] {
     .single .comments-area,
     .single .nav-links {
       width: 90%; } }
-.single .entry-header {
-  margin-bottom: 1rem; }
+@media screen and (min-width: 600px) {
+  .single .entry-header {
+    margin-bottom: 2rem; } }
+@media screen and (min-width: 600px) {
+  .single .entry-content .wp-block-image {
+    margin: 1.5rem 0 1.5rem 33.333%;
+    width: 66.6%; }
+    .single .entry-content .wp-block-image img {
+      width: 100%;
+      max-width: 40em; }
+  .single .entry-content h2 + .wp-block-image {
+    margin-top: 5rem; } }
 .single .entry-meta {
   color: #FFFFFF;
   margin-bottom: 2rem;
@@ -901,7 +964,7 @@ h5 a {
   max-width: calc(90rem + 2rem);
   display: flex;
   flex-wrap: wrap; }
-  @media screen and (min-width: 600px) and (max-width: 90rem) {
+  @media screen and (min-width: 600px) and (max-width: 94rem) {
     .header-wrapper {
       width: calc(90% + 2rem); } }
 
@@ -927,7 +990,7 @@ h5 a {
   width: 60%;
   background-color: #0B3861;
   text-align: right; }
-  @media screen and (min-width: 37.5em) {
+  @media screen and (min-width: 600px) {
     .main-navigation {
       width: calc(100% - 200px);
       text-align: left; } }
@@ -936,7 +999,7 @@ h5 a {
     list-style: none;
     margin: 0;
     padding-left: 0; }
-    @media screen and (min-width: 37.5em) {
+    @media screen and (min-width: 600px) {
       .main-navigation ul {
         float: right;
         margin-right: 1rem; } }
@@ -959,7 +1022,7 @@ h5 a {
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       left: auto; }
-  @media screen and (min-width: 37.5em) {
+  @media screen and (min-width: 600px) {
     .main-navigation li {
       float: left;
       position: relative; } }
@@ -970,7 +1033,7 @@ h5 a {
     padding: .75rem .5rem;
     letter-spacing: .05em;
     font-size: 1.5rem; }
-    @media screen and (min-width: 37.5em) {
+    @media screen and (min-width: 600px) {
       .main-navigation a {
         font-size: 1rem;
         padding: 2.4rem 1.25rem 0.9rem 1.25rem;
@@ -1002,7 +1065,7 @@ h5 a {
   .main-navigation .current_page_parent > a {
     font-weight: 800;
     letter-spacing: 0; }
-    @media screen and (min-width: 37.5em) {
+    @media screen and (min-width: 600px) {
       .main-navigation .current_page_item > a,
       .main-navigation .current-menu-item > a,
       .main-navigation .current_page_ancestor > a,
@@ -1036,7 +1099,7 @@ h5 a {
   width: 40px;
   margin-bottom: -5px; }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 600px) {
   .menu-toggle {
     display: none; }
 
@@ -1058,7 +1121,7 @@ h5 a {
 .widget-wrapper {
   display: flex;
   max-width: calc(90rem + 2rem); }
-  @media screen and (min-width: 600px) and (max-width: 90rem) {
+  @media screen and (min-width: 600px) and (max-width: 94rem) {
     .widget-wrapper {
       width: calc(90% + 2rem); } }
 

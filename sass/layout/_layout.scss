@@ -22,7 +22,7 @@ header[class$="-background-color"] {
 			width: calc(100% - 2rem);
 			max-width: 90rem;
 
-			@media screen and (min-width: 600px) and (max-width: 90rem) {
+			@media screen and (min-width: 600px) and (max-width: 94rem) {
 				width: 90%;
 			}
 		}
@@ -34,18 +34,25 @@ header[class$="-background-color"] {
 	width: 100%;
 	max-width: 90rem;
 
-	@media screen and (min-width: 600px) and (max-width: 90rem) {
-		width: calc(90% + 2rem);
+	@media screen and (min-width: 600px) and (max-width: 94rem) {
+		width: calc(90%);
 	}
-	
-	& .wp-block-column {
-		padding: 0;
+	@media (max-width: 599px) {	
+		& .wp-block-column {
+			margin-right: 1rem;
+			margin-left: 1rem;
+		}
 	}
 }
 
 @media (min-width: 600px) {
-    .wp-block-column {
-      flex-basis: 50%;
+    .has-2-columns .wp-block-column {
+      flex-basis: calc(50% - 2rem);
+      flex-grow: 1; 
+      position: relative;
+  	}
+  	.has-3-columns .wp-block-column {
+      flex-basis: calc(33.3333% - 2rem);
       flex-grow: 1; 
       position: relative;
   	} 
@@ -144,7 +151,7 @@ header[class$="-background-color"] {
 		width: 100%;
 		max-width: calc(90rem + 2rem);
 
-		@media screen and (min-width: 600px) and (max-width: 90rem) {
+		@media screen and (min-width: 600px) and (max-width: 94rem) {
 			width: calc(90% + 2rem);
 		}
 
