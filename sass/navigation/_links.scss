@@ -19,6 +19,13 @@ a {
 	}
 }
 
+a > .dashicons {
+	height: 30px;
+	width: 30px;
+	font-size: 30px;
+	color: $color__text-main;
+}
+
 p > a {
 	font-style: italic;
 }

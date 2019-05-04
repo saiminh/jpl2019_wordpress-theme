@@ -191,10 +191,5 @@ add_theme_support( 'editor-color-palette', array(
 ) );
 
 add_theme_support( 'align-wide' );
-
-//Enqueue the Dashicons script
-add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
-function load_dashicons_front_end() {
-wp_enqueue_style( 'dashicons' );
-}
-
+add_theme_support( 'editor-styles' );
+add_editor_style( 'style.css' );

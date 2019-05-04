@@ -6,3 +6,35 @@
 		max-width: 100%;
 	}
 }
+
+.wp-block-latest-posts {
+	&.columns-3  {
+		& li {
+			margin: 1rem;
+			width: inherit;
+			flex-basis: calc(33.3333% - 2rem);
+			flex-grow: 1; 
+			position: relative;
+
+			@media (min-width: 600px) {
+			    &:nth-child(odd) {
+			      margin-right: 0; }
+			    &:nth-child(even) {
+			      margin-left: 0; }
+			    &:not(:first-child) {
+			      margin-left: 1rem; }
+			    &:not(:last-child) {
+			      margin-right: 1rem; } 
+			    &:first-child {
+			    	margin-left: 0; }
+			    &:last-child {
+					margin-right: 0; }
+			  }
+
+			& {
+				overflow: hidden;
+			}
+		}
+	}	
+}
+
