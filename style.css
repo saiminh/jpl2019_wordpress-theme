@@ -630,6 +630,18 @@ header[class$="-background-color"] {
 .wp-block-mkl-section-block {
   margin-bottom: 1rem; }
 
+header.wp-block-mkl-section-block .section-bg {
+  background-size: auto 100%;
+  background-position: 90% bottom; }
+  @media screen and (max-width: 600px) {
+    header.wp-block-mkl-section-block .section-bg {
+      background-size: auto 300px;
+      background-position: 50% 0%;
+      position: relative;
+      top: 3rem;
+      height: 50vh;
+      margin-bottom: -5rem; } }
+
 [class^="wp-block"],
 .entry-content > .wp-block-mkl-section-block {
   margin-left: auto;
