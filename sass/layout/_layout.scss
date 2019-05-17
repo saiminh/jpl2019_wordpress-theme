@@ -2,6 +2,12 @@ header[class$="-background-color"] {
 	padding-bottom: 2rem;
 }
 
+.wp-block-mkl-section-block > .wp-block-mkl-section-block:last-child, body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-block > .wp-block-mkl-section-block:last-child {
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+}
+
+
 .wp-block-mkl-section-block {
 	margin-bottom: 1rem;
 }
@@ -20,25 +26,32 @@ header.wp-block-mkl-section-block .section-bg {
 	}
 }
 
-[class^="wp-block"],
-.entry-content > .wp-block-mkl-section-block {
+.entry-content > *,
+.wp-block-mkl-section-block.alignfull > *,
+.entry-content > .wp-block-mkl-section-block
+ {
+	box-sizing: border-box;
+	width: calc(100% - 2rem);
+	max-width: 90rem;
+	margin-left: auto;
+	margin-right: auto;
 
-	& {
-		margin-left: auto;
-		margin-right: auto;
+	@media screen and (min-width: 600px) and (max-width: 94rem) {
+		width: 90%;
 	}
+}
 
-	&.alignfull {
-		max-width: 100vw;
+.entry-content > .wp-block-mkl-section-block.alignfull {
+	max-width: 100vw;
+	width: 100vw;
 
-		& > [class^="wp-block"] { //All containers&sections within an alignfull have the maxwidth propert
-			box-sizing: border-box;
-			width: calc(100% - 2rem);
-			max-width: 90rem;
+	& > [class^="wp-block"] { //All containers&sections within an alignfull have the maxwidth propert
+		box-sizing: border-box;
+		width: calc(100% - 2rem);
+		max-width: 90rem;
 
-			@media screen and (min-width: 600px) and (max-width: 94rem) {
-				width: 90%;
-			}
+		@media screen and (min-width: 600px) and (max-width: 94rem) {
+			width: 90%;
 		}
 	}
 }
@@ -96,11 +109,6 @@ header.wp-block-mkl-section-block .section-bg {
 	margin-bottom: 0;
 }
 
-.columns-grey-background {
-	background-color: #EEE;
-	padding: 2rem;
-}
-
 // Colored block within a column
 .wp-block-column [class$="-background-color"] {
 	padding: 2rem;
@@ -133,12 +141,41 @@ header.wp-block-mkl-section-block .section-bg {
 
 // Special columns
 
-.wp-block-columns.divide-33-66 {
+.wp-block-columns.columns-divide-33-66 {
 	.wp-block-column:first-child {
 		flex: 33.333%;
 	}
 	.wp-block-column:nth-child(2) {
 		flex: 66.666%;
+	}
+}
+
+.wp-block-columns.columns-divide-66-33 {
+	.wp-block-column:first-child {
+		flex: 66.666%;
+	}
+	.wp-block-column:nth-child(2) {
+		flex: 33.333%;
+	}
+}
+
+.wp-block-columns.columns-content-vertically-centered {
+	.wp-block-column {
+		align-self: center;
+	}
+}
+
+// 
+
+.wp-block-mkl-section-block [class$="-background-color"] {
+	padding: 2rem;
+	margin-bottom: 0;
+
+	// Cover within a colored block
+	& .wp-block-cover {
+		margin: -2rem -2rem 2rem -2rem;
+		width: calc( 100% + 4rem);
+		min-height: 250px;
 	}
 }
 

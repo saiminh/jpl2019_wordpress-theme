@@ -192,4 +192,4 @@ add_theme_support( 'editor-color-palette', array(
 
 add_theme_support( 'align-wide' );
 add_theme_support( 'editor-styles' );
-add_editor_style( 'style.css' );
+add_editor_style( 'editor-style.css' );
