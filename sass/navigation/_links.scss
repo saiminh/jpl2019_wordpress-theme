@@ -60,6 +60,11 @@ h5 a {
 			color: $color__text-negative;
 		}
 	}
+
+	.has-orange-background-color &,
+	.has-orange-background-color &:visited {
+		border-bottom-color: $color__text-negative;
+	}
 }
 
 .wp-block-button__link:active, 

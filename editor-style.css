@@ -1,0 +1,30 @@
+.wp-block-mkl-section-block.alignfull > .section-bg {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+.entry-content > *, .wp-block-mkl-section-block.alignfull > *, .entry-content > .wp-block-mkl-section-block {
+    box-sizing: border-box;
+    width: calc(100% - 2rem);
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wp-block-mkl-section-block > .section-bg {
+    background-size: auto 100%;
+    background-position: 90% bottom;
+}
+
+
+.wp-block:not([data-align="full"]) {
+	width: 90%;
+	max-width: 90rem;
+}
+
+.wp-block-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="core/column"]:not(:first-child) {
+	margin-left: inherit;
+}
+
+.wp-block .block-editor-block-list__block-edit {
+	//border: 1px dashed red;
+}

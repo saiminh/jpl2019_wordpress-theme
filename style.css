@@ -550,10 +550,10 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+body:not(.editor-styles-wrapper) button,
+body:not(.editor-styles-wrapper) input[type="button"],
+body:not(.editor-styles-wrapper) input[type="reset"],
+body:not(.editor-styles-wrapper) input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
@@ -563,18 +563,18 @@ input[type="submit"] {
   font-size: 0.75rem;
   line-height: 1;
   padding: .6em 1em .4em; }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
+  body:not(.editor-styles-wrapper) button:hover,
+  body:not(.editor-styles-wrapper) input[type="button"]:hover,
+  body:not(.editor-styles-wrapper) input[type="reset"]:hover,
+  body:not(.editor-styles-wrapper) input[type="submit"]:hover {
     border-color: #ccc #bbb #aaa; }
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  input[type="submit"]:active,
-  input[type="submit"]:focus {
+  body:not(.editor-styles-wrapper) button:active, body:not(.editor-styles-wrapper) button:focus,
+  body:not(.editor-styles-wrapper) input[type="button"]:active,
+  body:not(.editor-styles-wrapper) input[type="button"]:focus,
+  body:not(.editor-styles-wrapper) input[type="reset"]:active,
+  body:not(.editor-styles-wrapper) input[type="reset"]:focus,
+  body:not(.editor-styles-wrapper) input[type="submit"]:active,
+  body:not(.editor-styles-wrapper) input[type="submit"]:focus {
     border-color: #aaa #bbb #bbb; }
 
 input[type="text"],
@@ -634,17 +634,28 @@ header[class$="-background-color"] {
 .wp-block-mkl-section-block {
   margin-bottom: 1rem; }
 
-header.wp-block-mkl-section-block .section-bg {
+.wp-block-mkl-section-block > .section-bg {
   background-size: auto 100%;
   background-position: 90% bottom; }
   @media screen and (max-width: 600px) {
-    header.wp-block-mkl-section-block .section-bg {
+    .wp-block-mkl-section-block > .section-bg {
       background-size: auto 300px;
       background-position: 50% 0%;
       position: relative;
       top: 3rem;
       height: 50vh;
       margin-bottom: -5rem; } }
+
+.alignfull + .alignfull {
+  margin-top: -1rem; }
+
+.alignfull > .wp-block-mkl-section-block {
+  overflow: visible; }
+
+.wp-block-mkl-section-block.alignfull > .section-bg {
+  width: 100%;
+  max-width: 100%;
+  margin: 0; }
 
 .entry-content > *,
 .wp-block-mkl-section-block.alignfull > *,
@@ -717,6 +728,9 @@ header.wp-block-mkl-section-block .section-bg {
 [class$="-background-color"] .wp-block-cover {
   margin-bottom: 0; }
 
+[class$="-background-color"]:not(.alignfull) {
+  padding: 2rem; }
+
 .wp-block-column [class$="-background-color"] {
   padding: 2rem;
   overflow: visible;
@@ -749,6 +763,10 @@ header.wp-block-mkl-section-block .section-bg {
 
 .wp-block-columns.columns-content-vertically-centered .wp-block-column {
   align-self: center; }
+
+@media (max-width: 781px) {
+  .wp-block-columns.columns-flip-on-mobile {
+    flex-direction: column-reverse; } }
 
 .wp-block-mkl-section-block [class$="-background-color"] {
   padding: 2rem;
@@ -797,6 +815,13 @@ header.wp-block-mkl-section-block .section-bg {
   padding: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: left; }
+
+.wp-block:not([data-align="full"]) {
+  width: 90%;
+  max-width: 90rem; }
+
+.wp-block-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="core/column"]:not(:first-child) {
+  margin-left: inherit; }
 
 .blog .site-content {
   padding-top: 5rem; }
@@ -984,6 +1009,8 @@ h5 a {
     color: #FFFFFF; }
     .has-blue-background-color .wp-block-button__link:visited {
       color: #FFFFFF; }
+  .has-orange-background-color .wp-block-button__link, .has-orange-background-color .wp-block-button__link:visited {
+    border-bottom-color: #FFFFFF; }
 
 .wp-block-button__link:active,
 .wp-block-button__link:focus,
