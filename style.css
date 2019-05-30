@@ -1246,14 +1246,21 @@ header.has-blue-background-color p a {
           border-bottom: 1px solid rgba(255, 255, 255, 0.5); } }
   .main-navigation ul li:last-child a:after {
     content: ''; }
+  .main-navigation .sub-menu {
+    padding: 1rem 0; }
   .main-navigation .sub-menu a {
-    padding: 1rem 1.5rem 0 1.5rem;
+    padding: 1rem 1.5rem;
     letter-spacing: 0; }
     .main-navigation .sub-menu a:after {
       content: ''; }
+    .main-navigation .sub-menu a:hover {
+      border-bottom: none;
+      background-color: rgba(255, 255, 255, 0.05); }
   .main-navigation .sub-menu li:last-child a {
     border-bottom: none;
     padding-bottom: 1rem; }
+  .main-navigation .sub-menu li.current-menu-item > a {
+    border-bottom: none; }
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a,

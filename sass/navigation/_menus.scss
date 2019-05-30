@@ -158,19 +158,32 @@
 		content: '';
 	}
 
+	.sub-menu {
+		padding: 1rem 0;
+	}
+
 	.sub-menu a { //submenu links
 		//color: $color__text-main;
-		padding: 1rem 1.5rem 0 1.5rem;		
+		padding: 1rem 1.5rem;		
 		letter-spacing: 0;
 
 		&:after {
 			content: '';
+		}
+
+		&:hover {
+			border-bottom: none;
+			background-color: rgba(255,255,255,0.05);
 		}
 	}
 
 	.sub-menu li:last-child a {
 		border-bottom: none;
 		padding-bottom: 1rem;
+	}
+
+	.sub-menu li.current-menu-item > a {
+		border-bottom: none;
 	}
 
 	.current_page_item > a,
