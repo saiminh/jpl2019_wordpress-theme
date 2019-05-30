@@ -524,7 +524,14 @@ hr {
   margin-bottom: 1.5em; }
 
 ul, ol {
-  margin: 0 0 1.5rem 0; }
+  margin: 0 0 1.5rem 0;
+  max-width: 44rem; }
+  .content-area ul, .content-area ol {
+    border: 2px solid #000000;
+    padding: 2rem 2rem 1rem 4rem !important;
+    border-radius: 6px; }
+  .content-area [class$="-background-color"] ul, .content-area [class$="-background-color"] ol {
+    border: 2px solid #FFFFFF; }
 
 ul {
   list-style: disc; }
@@ -950,6 +957,8 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
     .single .comments-area,
     .single .nav-links {
       width: 90%; } }
+.single .entry-content {
+  padding: 3rem 0 6rem 0; }
 .single .entry-header {
   background-color: transparent;
   margin: 61px auto 2rem auto; }

@@ -1,5 +1,17 @@
 ul, ol {
 	margin: 0 0 1.5rem 0;
+	max-width: 44rem;
+
+	.content-area & {
+		//background-color: rgba(0,0,0,0.1);
+		border: 2px solid $color__text-main;
+		padding: 2rem 2rem 1rem 4rem!important;
+		border-radius: 6px;
+	}
+
+	.content-area [class$="-background-color"] & {
+		border: 2px solid $color__text-negative;
+	}
 }
 
 ul {
