@@ -742,7 +742,7 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
   margin-bottom: 0; }
   .wp-block-column [class$="-background-color"] .wp-block-cover {
     margin: -2rem -2rem 2rem -2rem;
-    width: calc( 100% + 4rem);
+    width: calc( 101% + 4rem);
     min-height: 250px; }
   .wp-block-column [class$="-background-color"]:after {
     content: '';
