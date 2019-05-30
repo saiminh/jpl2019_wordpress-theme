@@ -167,9 +167,9 @@
 			margin-top: 1rem;
 			margin-bottom: 1rem;
 			margin-left: 0;
-			//font-weight: 800;
-			//color: $color__brand-orange;
-			//font-style: italic;
+			/*font-weight: 800;*/
+			/*color: $color__brand-orange;*/
+			/*font-style: italic;*/
 
 			& a:visited {
 				color: $color__brand-orange;
@@ -182,8 +182,9 @@
 
 		& .entry-title {
 			margin-top: 0;
+			margin-bottom: 0;
 			color: $color__text-main;
-			//font-weight: 800;
+			/*font-weight: 800;*/
 
 			&:before {
 				content: none;
@@ -209,7 +210,7 @@
 			position: relative;
 			margin-top: 2em;
 			max-width: 42rem;
-			//float: left;
+			/*float: left;*/
 
 			&:before {
 				content: none;
@@ -233,9 +234,9 @@
 			margin-right: auto;
 
 			@media screen and (min-width: 600px) {
-				//width: 66.6%;
+				/*width: 66.6%;*/
 				max-width: 42rem;
-				//margin-left: 33.3%;
+				/*margin-left: 33.3%;*/
 			}
 		}
 		
@@ -251,17 +252,21 @@
 
 	& .entry-content > p:first-child,
 	& h2 + p { 
-		&:first-letter {
-			//color: #903;
+		/* &:first-letter {
 			float: left;
-			//font-family: Georgia;
-			font-size: 5.05em;
-			//font-weight: 800;
-			line-height: 6em;
-			padding-top: .07em;
-			padding-right: .1em;
-			padding-left: 0em;
-		}
+			font-size: 6rem;
+			height: 6rem;
+			line-height: 6rem;
+			padding: 4px 0 0 0;
+			margin:0;
+			//position: relative;
+			font-size:500%;
+				margin:8px 0 -5px 0;
+				padding:0 .1em 0 0;
+				height:.7em;
+				line-height:.85em;
+				float:left;
+		} */
 	}
 
 	& h2 + p,
@@ -269,7 +274,7 @@
 	& h4 + p,
 	& h5 + p {
 		@media screen and (min-width: 600px) {
-			//margin-top: 3rem;
+			/*margin-top: 3rem;*/
 		}
 	}
 	.entry-footer {
@@ -306,6 +311,6 @@
 	& .post-navigation,
 	& .comments-area,
 	& .entry-footer {
-		display: none; //REMOVE ONCE DESIGN FOR COMMENTS IS DONE 
+		display: none; /*REMOVE ONCE DESIGN FOR COMMENTS IS DONE */
 	}
 }
