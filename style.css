@@ -781,7 +781,7 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
       padding: 2rem; } }
   .wp-block-mkl-section-block [class$="-background-color"] .wp-block-cover {
     margin: -2rem -2rem 2rem -2rem;
-    width: calc( 100% + 4rem);
+    width: calc( 101% + 4rem);
     min-height: 250px; }
 
 [class$="-background-color"].wp-block-mkl-section-block .wp-block-image:first-child {
