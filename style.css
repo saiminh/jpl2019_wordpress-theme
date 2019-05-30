@@ -737,9 +737,12 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
   padding: 2rem; }
 
 .wp-block-column [class$="-background-color"] {
-  padding: 2rem;
+  padding: 1rem;
   overflow: visible;
   margin-bottom: 0; }
+  @media screen and (min-width: 600px) {
+    .wp-block-column [class$="-background-color"] {
+      padding: 2rem; } }
   .wp-block-column [class$="-background-color"] .wp-block-cover {
     margin: -2rem -2rem 2rem -2rem;
     width: calc( 101% + 4rem);
@@ -772,6 +775,10 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
 @media (max-width: 781px) {
   .wp-block-columns.columns-flip-on-mobile {
     flex-direction: column-reverse; } }
+
+.entry-content > .section-longread {
+  max-width: 42rem;
+  margin: 2rem auto; }
 
 .wp-block-mkl-section-block [class$="-background-color"] {
   padding: 2rem 1rem;

@@ -134,9 +134,13 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
 
 // Colored block within a column
 .wp-block-column [class$="-background-color"] {
-	padding: 2rem;
+	padding: 1rem;
 	overflow: visible;
 	margin-bottom: 0;
+
+	@media screen and (min-width: 600px) {
+		padding: 2rem;
+	}
 
 	// Cover within a colored block
 	& .wp-block-cover {
@@ -162,7 +166,7 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
 
 
 
-// Special columns
+// Special columns and classes
 
 .wp-block-columns.columns-divide-33-66 {
 	.wp-block-column:first-child {
@@ -189,6 +193,11 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
 	@media (max-width: 781px) {
 		flex-direction: column-reverse;
 	}
+}
+
+.entry-content > .section-longread {
+	max-width: 42rem;
+	margin: 2rem auto;
 }
 
 // 
