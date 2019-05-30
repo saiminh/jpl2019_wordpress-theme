@@ -42,7 +42,15 @@ header h1 {
 
 h5 {
 	color: $color__link;
-	margin-bottom: -1em;
+	margin-bottom: 0;
+}
+
+h5 + h2 {
+	margin-top: 0.12rem;
+}
+
+h5 + h3 {
+	margin-top: .25rem;
 }
 
 h6 {
