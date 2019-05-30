@@ -136,7 +136,7 @@
 	}
 
 	& .entry-content{
-		padding: 3rem 0 6rem 0;
+		padding: 3rem 1rem 6rem 1rem;
 	}
 
 	& .entry-header {
@@ -149,6 +149,8 @@
 			height: 60vh;
 			width: 90%;
 			max-width: 90rem;
+			display: flex;
+			align-items: center;
 		}
 
 		& .entry-header_thumbnail {
@@ -166,6 +168,11 @@
 				right: 1rem;
 			}
 		}
+		& .entry-header_text {
+			@media screen and (min-width: 600px) {
+				width: calc(50% - 1rem);
+			}
+		}
 
 		& .entry-meta {
 			margin-top: 1rem;
@@ -180,7 +187,7 @@
 			}
 
 			@media screen and (min-width: 600px) {
-				margin-top: 4rem;
+				margin-top: 0;
 			}
 		}
 
@@ -194,8 +201,7 @@
 				content: none;
 			}
 
-			@media screen and (min-width: 600px) {
-				width: calc(50% - 2rem);
+			@media screen and (min-width: 600px) {				
 				margin-left: 0;
 				font-size: 3rem;
 			}

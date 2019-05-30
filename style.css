@@ -527,11 +527,17 @@ ul, ol {
   margin: 0 0 1.5rem 0;
   max-width: 44rem; }
   .content-area ul, .content-area ol {
-    border: 2px solid #000000;
-    padding: 2rem 2rem 1rem 4rem !important;
-    border-radius: 6px; }
+    background-color: #dde9f4;
+    padding: 1rem 1rem 0.25rem 2rem !important;
+    box-shadow: -6px 6px 0 #91b7da;
+    color: #2e5e8a; }
+    @media (min-width: 600px) {
+      .content-area ul, .content-area ol {
+        padding: 2rem 2rem 1rem 3.5rem !important; } }
   .content-area [class$="-background-color"] ul, .content-area [class$="-background-color"] ol {
-    border: 2px solid #FFFFFF; }
+    background-color: #285177;
+    box-shadow: -6px 6px 0 #082b4a;
+    color: #dde9f4; }
 
 ul {
   list-style: disc; }
@@ -958,7 +964,7 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
     .single .nav-links {
       width: 90%; } }
 .single .entry-content {
-  padding: 3rem 0 6rem 0; }
+  padding: 3rem 1rem 6rem 1rem; }
 .single .entry-header {
   background-color: transparent;
   margin: 61px auto 2rem auto; }
@@ -968,7 +974,9 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
       margin-top: 78px;
       height: 60vh;
       width: 90%;
-      max-width: 90rem; } }
+      max-width: 90rem;
+      display: flex;
+      align-items: center; } }
   .single .entry-header .entry-header_thumbnail {
     height: 200px;
     width: 100%;
@@ -982,6 +990,9 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
         width: calc(50% - 2rem);
         position: absolute;
         right: 1rem; } }
+  @media screen and (min-width: 600px) {
+    .single .entry-header .entry-header_text {
+      width: calc(50% - 1rem); } }
   .single .entry-header .entry-meta {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -993,7 +1004,7 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
       color: #F9A870; }
     @media screen and (min-width: 600px) {
       .single .entry-header .entry-meta {
-        margin-top: 4rem; } }
+        margin-top: 0; } }
   .single .entry-header .entry-title {
     margin-top: 0;
     margin-bottom: 0;
@@ -1003,7 +1014,6 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
       content: none; }
     @media screen and (min-width: 600px) {
       .single .entry-header .entry-title {
-        width: calc(50% - 2rem);
         margin-left: 0;
         font-size: 3rem; } }
 .single .post h2, .single .post h3, .single .post h4, .single .post h5 {

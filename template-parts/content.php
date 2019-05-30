@@ -14,6 +14,7 @@
 		<a href="<?php the_permalink(); ?>" class="entry-header_thumbnail" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
 			<?php // jpl_2019_post_thumbnail(); ?>
 		</a>
+		<div class="entry-header_text">
 		<?php
 		if ( 'post' === get_post_type() ) :
 			?>
@@ -30,6 +31,7 @@
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;?>
+		</div>
 	</header><!-- .entry-header -->
 
 	
