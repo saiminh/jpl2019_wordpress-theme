@@ -31,11 +31,12 @@
 .site-title {
 	margin: 0;
 	overflow: auto;
-	display: flex;
+	//display: flex;
 	padding: 0;
 
 	& a {
 		line-height: 1;
+		display: block;
 	}
 }
 
@@ -48,10 +49,11 @@
 	display: block;
 	//float: left;
 	width: 60%;
+	min-width: calc(100% - 200px);
 	background-color: $color__brand-blue;
 	text-align: right;
 
-	@media screen and (min-width: 600px){
+	@media screen and (min-width: 900px){
 		width: calc(100% - 200px);
 		text-align: left;
 	}
@@ -62,7 +64,7 @@
 		margin: 0;
 		padding-left: 0;
 
-		@media screen and (min-width: 600px){
+		@media screen and (min-width: 900px){
 			float: right;
 			margin-right: 1rem;
 		}
@@ -110,7 +112,7 @@
 
 	li {
 
-		@media screen and (min-width: 600px) {
+		@media screen and (min-width: 900px) {
 			float: left;
 			position: relative;
 		}	
@@ -130,7 +132,7 @@
 		letter-spacing: .05em;
 		font-size: 1.5rem;
 
-		@media screen and (min-width: 600px) {
+		@media screen and (min-width: 900px) {
 			font-size: 1rem;
 		//	text-transform: uppercase;
 		//  border-top: 3px solid transparent;
@@ -220,7 +222,7 @@
 	margin-bottom: -5px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
 	.menu-toggle {
 		display: none;
 	}

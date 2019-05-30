@@ -31,11 +31,11 @@
 				the_custom_logo();
 				if ( is_front_page() && is_home() ) :
 					?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php get_template_part('images/SVG/inline', 'jpl_logo.svg');( 'name' ); ?></a></h1>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php get_template_part('images/SVG/inline', 'jpl_logo.svg'); ?></a></h1>
 					<?php
 				else :
 					?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php get_template_part('images/SVG/inline', 'jpl_logo.svg');( 'name' ); ?></a></p>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php get_template_part('images/SVG/inline', 'jpl_logo.svg'); ?></a></p>
 					<?php
 				endif;
 				$jpl_2019_description = get_bloginfo( 'description', 'display' );

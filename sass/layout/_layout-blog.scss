@@ -136,37 +136,83 @@
 	}
 
 	& .entry-header {
-		
+		background-color: transparent;
+		margin: 61px auto 2rem auto;
+
 		@media screen and (min-width: 600px) {
 			margin-bottom: 2rem;
+			margin-top: 78px;
+			height: 60vh;
+			width: 90%;
+			max-width: 90rem;
+		}
+
+		& .entry-header_thumbnail {
+			height: 200px;
+			width: 100%;
+			display: block;
+			background-size: cover;
+			background-position: 50% 50%;
+			background-color: #EEE;
+
+			@media screen and (min-width: 600px) {
+				height: 60vh;
+				width: calc(50% - 2rem);
+				position: absolute;
+				right: 1rem;
+			}
+		}
+
+		& .entry-meta {
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			margin-left: 0;
+			//font-weight: 800;
+			//color: $color__brand-orange;
+			//font-style: italic;
+
+			& a:visited {
+				color: $color__brand-orange;
+			}
+
+			@media screen and (min-width: 600px) {
+				margin-top: 4rem;
+			}
+		}
+
+		& .entry-title {
+			margin-top: 0;
+			color: $color__text-main;
+			//font-weight: 800;
+
+			&:before {
+				content: none;
+			}
+
+			@media screen and (min-width: 600px) {
+				width: calc(50% - 2rem);
+				margin-left: 0;
+				font-size: 3rem;
+			}
 		}
 	}
 
-	& .entry-meta {
-		color: $color__text-negative;
-		margin-bottom: 2rem;
-		//max-width: 40em;
-		font-style: italic;
 
-		& a:visited {
-			color: $color__brand-orange;
-		}
-	}
 
 	& .post h2,
 	& .post h3,
 	& .post h4,
 	& .post h5 {
+		width: 100%;
 
 		@media screen and (min-width: 600px) {
 			position: relative;
-			width:30.3%;
-			float: left;
-			clear: left;
-			margin-top: 4rem;
+			margin-top: 2em;
+			max-width: 42rem;
+			//float: left;
 
 			&:before {
-				content: '';
+				content: none;
 				width:4rem;
 				height: 4px;
 				background-color: $color__brand-orange;
@@ -182,30 +228,24 @@
 		& > p,
 		& > ul,
 		& > ol {
-			
+			width: 100%;
 			margin-left: auto;
 			margin-right: auto;
 
 			@media screen and (min-width: 600px) {
-				width: 66.6%;
-				max-width: 33em;
-				margin-left: 33.3%;
+				//width: 66.6%;
+				max-width: 42rem;
+				//margin-left: 33.3%;
 			}
 		}
+		
+		.wp-block-image {	
+			width: 100%;
+			max-width: 42rem;
 
-		@media screen and (min-width: 600px) {			
-			.wp-block-image {	
-				margin: 1.5rem 0 1.5rem 33.333%;
-				width: 66.6%;
-
-				& img {
-					width: 100%;
-					max-width: 40em;
-				}
-			}
-			h2 + .wp-block-image {
-				margin-top:5rem;
-			}
+			& img {
+				width: 100%;
+			}			
 		}
 	}
 
@@ -229,7 +269,7 @@
 	& h4 + p,
 	& h5 + p {
 		@media screen and (min-width: 600px) {
-			margin-top: 6rem;
+			//margin-top: 3rem;
 		}
 	}
 	.entry-footer {

@@ -21,4 +21,7 @@ body:not(.editor-styles-wrapper){
 			border-color: $color__border-button-focus;
 		}
 	}
+	button {
+		border: none;
+	}
 }

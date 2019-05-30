@@ -5,6 +5,10 @@ a {
 	&:visited {
 		color: $color__link-visited;
 	}
+	.has-blue-background-color &,
+	.has-black-background-color & {
+		color: $color__link;
+	}
 	&:hover,
 	&:focus,
 	&:active {
@@ -44,6 +48,15 @@ h5 a {
 	padding: 0;
 }
 
+header.has-blue-background-color p a {
+	font-weight: 900;
+	font-style: normal;
+	border-bottom: 3px solid $color__link;
+	color: $color__text-negative;
+	border-radius: 0;		
+	letter-spacing: -.02em;
+}
+
 .wp-block-button__link {
 	background-color: $color__background-button;
 	color: $color__text-main;
@@ -80,4 +93,14 @@ h5 a {
 .jpl-social-icon {
 	display: inline-block;
 	margin-bottom: 0;
+}
+
+.edit-link a {
+	position: fixed;
+	top: 8rem;
+	left: 0;
+	background: $color__brand-orange;
+	color: #FFF!important;
+	padding: 2rem;
+	z-index: 1111;
 }
