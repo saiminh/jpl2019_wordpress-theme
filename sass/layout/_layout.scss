@@ -229,8 +229,13 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
 [class$="-background-color"].wp-block-mkl-section-block {
 	// First child Image within a colored block
 	& .wp-block-image:first-child {
-		margin: -2rem -2rem 2rem -2rem;
-		max-width: calc(100% + 4rem);
+		margin: -2rem -1rem 1rem -1rem;
+		max-width: calc(100% + 2rem);
+
+		@media screen and (min-width: 600px) {
+			margin: -2rem -2rem 2rem -2rem;
+			max-width: calc(100% + 4rem);
+		}
 	}
 }
 

@@ -830,8 +830,12 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
     min-height: 250px; }
 
 [class$="-background-color"].wp-block-mkl-section-block .wp-block-image:first-child {
-  margin: -2rem -2rem 2rem -2rem;
-  max-width: calc(100% + 4rem); }
+  margin: -2rem -1rem 1rem -1rem;
+  max-width: calc(100% + 2rem); }
+  @media screen and (min-width: 600px) {
+    [class$="-background-color"].wp-block-mkl-section-block .wp-block-image:first-child {
+      margin: -2rem -2rem 2rem -2rem;
+      max-width: calc(100% + 4rem); } }
 
 .wp-block-media-text .wp-block-media-text__content {
   padding: 0 2rem; }
@@ -1168,7 +1172,7 @@ h5 a {
 .edit-link a {
   position: fixed;
   top: 8rem;
-  left: 0;
+  right: 0;
   background: #F9A870;
   color: #FFF !important;
   padding: 2rem;
