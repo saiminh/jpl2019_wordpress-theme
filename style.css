@@ -526,21 +526,26 @@ hr {
 ul, ol {
   margin: 0 0 1.5rem 0;
   max-width: 44rem; }
-  .content-area ul, .content-area ol {
-    background-color: #dde9f4;
-    padding: 1rem 1rem 0.25rem 2rem !important;
-    box-shadow: -6px 6px 0 #91b7da;
-    color: #2e5e8a; }
-    @media (min-width: 600px) {
-      .content-area ul, .content-area ol {
-        padding: 2rem 2rem 1rem 3.5rem !important; } }
-  .content-area [class$="-background-color"] ul, .content-area [class$="-background-color"] ol {
-    background-color: #285177;
-    box-shadow: -6px 6px 0 #082b4a;
-    color: #dde9f4; }
+  .content-area ul:not(.wp-block-latest-posts), .content-area ol:not(.wp-block-latest-posts) {
+    padding: 1em 1em 0.5em 2.5em !important;
+    border-left: 1px solid #F9A870;
+    font-size: 0.925em; }
 
 ul {
-  list-style: disc; }
+  list-style: none; }
+  .content-area ul li {
+    position: relative; }
+  .content-area ul li:before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #000000;
+    position: absolute;
+    left: -1em;
+    top: .6em; }
+  .content-area [class$="-background-color"] ul li:before {
+    background-color: #FFFFFF; }
 
 ol {
   list-style: decimal; }
