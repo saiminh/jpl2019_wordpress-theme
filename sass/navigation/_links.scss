@@ -30,8 +30,14 @@ a > .dashicons {
 	color: $color__text-main;
 }
 
-p > a {
-	font-style: italic;
+p:not(.site-title) > a {
+	//font-style: italic;
+	color: inherit;
+	border-bottom: 2px solid $color__text-main;
+}
+
+[class$="-background-color"] p > a {
+	border-bottom-color: $color__text-negative;
 }
 
 h5 a {
@@ -46,15 +52,6 @@ h5 a {
 
 .wp-block-button {
 	padding: 0;
-}
-
-header.has-blue-background-color p a {
-	font-weight: 900;
-	font-style: normal;
-	border-bottom: 3px solid $color__link;
-	color: $color__text-negative;
-	border-radius: 0;		
-	letter-spacing: -.02em;
 }
 
 .wp-block-button__link {

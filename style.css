@@ -1123,8 +1123,12 @@ a > .dashicons {
   font-size: 30px;
   color: #000000; }
 
-p > a {
-  font-style: italic; }
+p:not(.site-title) > a {
+  color: inherit;
+  border-bottom: 2px solid #000000; }
+
+[class$="-background-color"] p > a {
+  border-bottom-color: #FFFFFF; }
 
 h5 a {
   text-decoration: none; }
@@ -1133,14 +1137,6 @@ h5 a {
 
 .wp-block-button {
   padding: 0; }
-
-header.has-blue-background-color p a {
-  font-weight: 900;
-  font-style: normal;
-  border-bottom: 3px solid #F9A870;
-  color: #FFFFFF;
-  border-radius: 0;
-  letter-spacing: -.02em; }
 
 .wp-block-button__link {
   background-color: transparent;
