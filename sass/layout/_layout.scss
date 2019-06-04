@@ -240,7 +240,8 @@ h5 + .wp-block-columns:not(.columns-content-vertically-centered) {
 .wp-block-columns.columns-divide-33-66 {
 	@media (min-width: 600px) {
 		.wp-block-column:first-child {
-			flex: 33.333%;
+			flex: calc(33.333% - 1rem);
+			margin-right: 0;
 		}
 		.wp-block-column:nth-child(2) {
 			flex: 66.666%;
@@ -250,7 +251,7 @@ h5 + .wp-block-columns:not(.columns-content-vertically-centered) {
 .wp-block-columns.columns-divide-66-33 {
 	@media (min-width: 600px) {
 		.wp-block-column:first-child {
-			flex: 66.666%;
+			flex: calc(66.666% - 1rem);
 		}
 		.wp-block-column:nth-child(2) {
 			flex: 33.333%;
