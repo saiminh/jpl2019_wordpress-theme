@@ -114,7 +114,7 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
 	}
 }
 
-.wp-block-columns + .wp-block-columns,
+.wp-block-columns + .wp-block-columns:not(.columns-content-vertically-centered),
 h1 + .wp-block-columns,
 h2 + .wp-block-columns,
 h3 + .wp-block-columns,
