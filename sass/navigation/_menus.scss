@@ -268,8 +268,11 @@
 // Footer Menu
 
 .widget-wrapper {
-	display: flex;
 	max-width: calc(90rem + 2rem);
+
+	@media screen and (min-width: 600px) {
+		display: flex;
+	}
 	
 	@media screen and (min-width: 600px) and (max-width: 94rem) {
 		width: calc(90% + 2rem);

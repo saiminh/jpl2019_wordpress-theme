@@ -1,5 +1,9 @@
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0;
+
+	@media (min-width: 600px) {
+		margin: 0 0 1.5em;
+	}
 
 	/* Make sure select elements fit in widgets. */
 	select {

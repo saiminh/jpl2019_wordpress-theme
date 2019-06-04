@@ -1422,8 +1422,10 @@ h5 a {
   width: 50%; }
 
 .widget-wrapper {
-  display: flex;
   max-width: calc(90rem + 2rem); }
+  @media screen and (min-width: 600px) {
+    .widget-wrapper {
+      display: flex; } }
   @media screen and (min-width: 600px) and (max-width: 94rem) {
     .widget-wrapper {
       width: calc(90% + 2rem); } }
@@ -1535,8 +1537,11 @@ h5 a {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
+  margin: 0;
   /* Make sure select elements fit in widgets. */ }
+  @media (min-width: 600px) {
+    .widget {
+      margin: 0 0 1.5em; } }
   .widget select {
     max-width: 100%; }
 
