@@ -40,6 +40,10 @@ p:not(.site-title) > a {
 	border-bottom-color: $color__text-negative;
 }
 
+.has-lightgrey-background-color  p > a {
+	border-bottom-color: $color__text-main;
+}
+
 h5 a {
 	text-decoration: none;
 

@@ -1,5 +1,24 @@
 header[class$="-background-color"] {
 	padding-bottom: 2rem;
+
+	& + h5,
+	& + h4,
+	& + h3,
+	& + h2,
+	& + h1 {
+		margin-top: 2rem;
+
+		@media (min-width: 600px) {
+			margin-top: 4rem;
+		}
+	}
+}
+
+.wp-block-spacer {
+	height: 2rem!important;
+	@media (min-width: 600px) {
+		height: 4rem!important;
+	}
 }
 
 .wp-block-mkl-section-block > .wp-block-mkl-section-block:last-child, 
@@ -10,7 +29,11 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
 
 
 .wp-block-mkl-section-block {
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
+
+	@media (min-width: 600px) {
+		margin-bottom: 4rem;
+	}
 
 	&.alignfull {
 		margin-bottom: 0;
@@ -75,6 +98,45 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
 	}
 }
 
+.wp-block-columns:not(.columns-content-vertically-centered) .wp-block-column {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+
+	@media (min-width: 600px) {
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+	}
+
+	& + .wp-block-column {
+		@media (max-width: 600px) {
+			margin-top: 0;
+		}
+	}
+}
+
+.wp-block-columns + .wp-block-columns,
+h1 + .wp-block-columns,
+h2 + .wp-block-columns,
+h3 + .wp-block-columns,
+h4 + .wp-block-columns,
+h5 + .wp-block-columns {
+	margin-top: -2rem;
+
+	@media (min-width: 600px) {
+		margin-top: -4rem;
+	}
+}
+
+.wp-block-mkl-section-block.alignfull {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	
+	@media (min-width: 600px) {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+}
+
 [class^="wp-block"].alignfull > .wp-block-columns,
 .entry-content > .wp-block-mkl-section-block.alignfull > .wp-block-columns {
 	width: 100%;
@@ -123,7 +185,10 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
 	overflow: hidden;
 }
 
-[class$="-background-color"] .wp-block-column,
+.wp-block-column *:first-child {
+	margin-top: 0;	
+}
+
 [class$="-background-color"] .wp-block-cover {
 	margin-bottom: 0;
 }
@@ -201,7 +266,6 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
 
 .entry-content > .section-longread {
 	max-width: 42rem;
-	margin: 2rem auto;
 }
 
 // 
@@ -232,10 +296,22 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
 		margin: -2rem -1rem 1rem -1rem;
 		max-width: calc(100% + 2rem);
 
+		& > figure {
+			margin:0;
+		}
+
 		@media screen and (min-width: 600px) {
 			margin: -2rem -2rem 2rem -2rem;
 			max-width: calc(100% + 4rem);
 		}
+	}
+}
+
+[class$="-background-color"].wp-block-mkl-section-block .columns-content-vertically-centered {
+	//except if this is a vertically centered column box...
+	& .wp-block-image:first-child,
+	& .wp-block-column {
+		margin: 0;
 	}
 }
 
