@@ -764,6 +764,9 @@ h5 + .wp-block-columns:not(.columns-content-vertically-centered) {
     h5 + .wp-block-columns:not(.columns-content-vertically-centered) {
       margin-top: -4rem; } }
 
+.wp-block-columns + .wp-block-columns.columns-content-vertically-centered {
+  margin-top: 0; }
+
 .wp-block-mkl-section-block.alignfull {
   padding-top: 2rem;
   padding-bottom: 2rem; }
