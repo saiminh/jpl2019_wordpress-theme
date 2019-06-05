@@ -763,9 +763,13 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
     .wp-block-columns:not(.columns-content-vertically-centered) .wp-block-column + .wp-block-column {
       margin-top: 0; } }
 
-@media (min-width: 600px) {
-  .wp-block-columns.columns-flip-on-mobile:not(.columns-content-vertically-centered) .wp-block-column + .wp-block-column {
+@media (max-width: 599px) {
+  .wp-block-columns.columns-flip-on-mobile .wp-block-column + .wp-block-column {
     margin-top: 2rem;
+    margin-bottom: 0; } }
+@media (max-width: 599px) {
+  [class$="-background-color"] .wp-block-columns.columns-flip-on-mobile .wp-block-column + .wp-block-column {
+    margin-top: 0;
     margin-bottom: 0; } }
 
 .wp-block-columns + .wp-block-columns,

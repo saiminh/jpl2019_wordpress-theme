@@ -114,10 +114,17 @@ body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-mkl-section-
 	}
 }
 // oh god... so for the flip-on-mobile columns we DO need that spacing before but not the one after...
-.wp-block-columns.columns-flip-on-mobile:not(.columns-content-vertically-centered) .wp-block-column + .wp-block-column {
-	@media (min-width: 600px) {
+.wp-block-columns.columns-flip-on-mobile .wp-block-column + .wp-block-column {
+	@media (max-width: 599px) {
 		margin-top: 2rem;
 		margin-bottom: 0;
+	}
+
+	[class$="-background-color"] & {
+		@media (max-width: 599px) {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
 	}
 }
 
