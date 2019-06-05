@@ -1067,7 +1067,7 @@ h5 + .wp-block-columns:not(.columns-content-vertically-centered) {
     .single .nav-links {
       width: 90%; } }
 .single .entry-content {
-  padding: 3rem 1rem 6rem 1rem; }
+  padding: 2rem 1rem 6rem 1rem; }
 .single .entry-header {
   background-color: transparent;
   margin: 61px auto 2rem auto; }
