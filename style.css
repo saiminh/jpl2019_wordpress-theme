@@ -977,11 +977,14 @@ h5 + .wp-block-columns:not(.columns-content-vertically-centered) {
 .wp-block-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="core/column"]:not(:first-child) {
   margin-left: inherit; }
 
-.blog .site-content {
+.blog .site-content,
+.archive .site-content {
   padding-top: 5rem; }
-.blog .entry-header {
+.blog .entry-header,
+.archive .entry-header {
   background-color: transparent; }
-.blog .entry-header_thumbnail {
+.blog .entry-header_thumbnail,
+.archive .entry-header_thumbnail {
   display: block;
   height: 33vh;
   background-color: #DDD;
@@ -990,53 +993,101 @@ h5 + .wp-block-columns:not(.columns-content-vertically-centered) {
   width: 100%;
   overflow: hidden;
   position: relative; }
-.blog .articles-list {
+.blog .articles-list,
+.archive .articles-list {
   width: 100%;
   max-width: 92rem;
   margin-left: auto;
   margin-right: auto; }
-  .blog .articles-list article {
+  .blog .articles-list article,
+  .archive .articles-list article {
     margin: 1rem;
     background-color: #EEE; }
-    .blog .articles-list article .entry-meta, .blog .articles-list article .entry-title, .blog .articles-list article .entry-content, .blog .articles-list article .entry-footer {
+    .blog .articles-list article .entry-meta, .blog .articles-list article .entry-title, .blog .articles-list article .entry-content, .blog .articles-list article .entry-footer,
+    .archive .articles-list article .entry-meta,
+    .archive .articles-list article .entry-title,
+    .archive .articles-list article .entry-content,
+    .archive .articles-list article .entry-footer {
       margin: 1rem; }
-    .blog .articles-list article .entry-meta, .blog .articles-list article .entry-content, .blog .articles-list article .entry-footer {
+    .blog .articles-list article .entry-meta, .blog .articles-list article .entry-content, .blog .articles-list article .entry-footer,
+    .archive .articles-list article .entry-meta,
+    .archive .articles-list article .entry-content,
+    .archive .articles-list article .entry-footer {
       font-size: 1rem; }
-    .blog .articles-list article .entry-title {
+    .blog .articles-list article .entry-title,
+    .archive .articles-list article .entry-title {
       font-size: 1.5rem;
       margin-bottom: 0; }
-      .blog .articles-list article .entry-title a {
+      .blog .articles-list article .entry-title a,
+      .archive .articles-list article .entry-title a {
         color: #000000; }
-    .blog .articles-list article .entry-footer {
+    .blog .articles-list article .entry-footer,
+    .archive .articles-list article .entry-footer {
       display: none; }
   @media screen and (min-width: 600px) {
-    .blog .articles-list {
+    .blog .articles-list,
+    .archive .articles-list {
       display: flex;
       flex-wrap: wrap; }
-      .blog .articles-list article {
+      .blog .articles-list article,
+      .archive .articles-list article {
         flex-basis: calc(33.3333% - 3rem);
         flex-grow: 1;
         position: relative; }
-        .blog .articles-list article .entry-meta, .blog .articles-list article .entry-title, .blog .articles-list article .entry-content, .blog .articles-list article .entry-footer {
+        .blog .articles-list article .entry-meta, .blog .articles-list article .entry-title, .blog .articles-list article .entry-content, .blog .articles-list article .entry-footer,
+        .archive .articles-list article .entry-meta,
+        .archive .articles-list article .entry-title,
+        .archive .articles-list article .entry-content,
+        .archive .articles-list article .entry-footer {
           margin: 1rem 2rem 0.5rem 2rem; }
-      .blog .articles-list article:first-child {
+      .blog .articles-list article:first-child,
+      .archive .articles-list article:first-child {
         flex-basis: calc(66.6% - 3rem);
         background-color: #0B3861;
         color: #FFFFFF; }
-        .blog .articles-list article:first-child a, .blog .articles-list article:first-child a:visited {
+        .blog .articles-list article:first-child a, .blog .articles-list article:first-child a:visited,
+        .archive .articles-list article:first-child a,
+        .archive .articles-list article:first-child a:visited {
           color: #F9A870; }
-        .blog .articles-list article:first-child .entry-title {
+        .blog .articles-list article:first-child .entry-title,
+        .archive .articles-list article:first-child .entry-title {
           font-size: 2rem;
           font-weight: 800; }
-          .blog .articles-list article:first-child .entry-title a {
+          .blog .articles-list article:first-child .entry-title a,
+          .archive .articles-list article:first-child .entry-title a {
             color: #FFFFFF; }
-        .blog .articles-list article:first-child .entry-header_thumbnail {
+        .blog .articles-list article:first-child .entry-header_thumbnail,
+        .archive .articles-list article:first-child .entry-header_thumbnail {
           height: 50vh; }
-      .blog .articles-list article:nth-child(2) .entry-header_thumbnail {
+      .blog .articles-list article:nth-child(2) .entry-header_thumbnail,
+      .archive .articles-list article:nth-child(2) .entry-header_thumbnail {
         height: 50vh; } }
   @media screen and (min-width: 600px) and (max-width: 90rem) {
-    .blog .articles-list {
+    .blog .articles-list,
+    .archive .articles-list {
       width: calc(90% + 2rem); } }
+
+.archive header h1 {
+  margin: 0.5em auto 0.5em auto;
+  font-size: 2rem;
+  max-width: 90rem;
+  width: calc(90% + 2rem); }
+@media (min-width: 600px) {
+  .archive .articles-list:not(.archive) article:first-child {
+    flex-basis: calc(33.333% - 3rem);
+    background-color: #EEE;
+    color: #000000; }
+    .archive .articles-list:not(.archive) article:first-child a, .archive .articles-list:not(.archive) article:first-child a:visited {
+      color: #F9A870; }
+    .archive .articles-list:not(.archive) article:first-child .entry-title {
+      font-size: 1.5rem;
+      font-weight: 800; }
+      .archive .articles-list:not(.archive) article:first-child .entry-title a {
+        color: #000000; }
+    .archive .articles-list:not(.archive) article:first-child .entry-header_thumbnail {
+      height: 33vh; } }
+.archive .articles-list article:nth-child(2) .entry-header_thumbnail {
+  height: 33vh; }
 
 .single .entry-title,
 .single .entry-meta,

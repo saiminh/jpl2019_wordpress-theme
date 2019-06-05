@@ -15,13 +15,13 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="page-header has-blue-background-color">
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-			
+			<div class="articles-list">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -44,7 +44,7 @@ get_header();
 
 		endif;
 		?>
-
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

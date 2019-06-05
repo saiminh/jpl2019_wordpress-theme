@@ -1,4 +1,5 @@
-.blog {
+.blog, 
+.archive {
 
 	.site-content {
 		padding-top: 5rem;
@@ -110,6 +111,43 @@
 		@media screen and (min-width: 600px) and (max-width: 90rem) {
 			width: calc(90% + 2rem);
 		}		
+	}
+}
+
+.archive {
+	& header h1 {
+		margin: 0.5em auto 0.5em auto;
+		font-size: 2rem;
+		max-width: 90rem;
+		width: calc(90% + 2rem);
+	}
+	& .articles-list:not(.archive) article:first-child {
+		@media (min-width: 600px) {
+	  		flex-basis: calc(33.333% - 3rem);
+	  		background-color: #EEE;
+	  		color: $color__text-main;
+
+	  		& a,
+	  		& a:visited {
+	  			color: $color__brand-orange;
+	  		}
+
+	  		& .entry-title {
+	  			font-size: 1.5rem;
+	  			font-weight: 800;
+	  			& a {
+		  			color: $color__text-main;
+		  		}
+		  	}
+
+	  		& .entry-header_thumbnail {
+	  			height: 33vh;
+	  		}
+		}
+	}
+
+	& .articles-list article:nth-child(2) .entry-header_thumbnail {
+		height: 33vh;
 	}
 }
 
