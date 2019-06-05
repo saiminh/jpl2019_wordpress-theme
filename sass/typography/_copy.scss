@@ -12,7 +12,7 @@ blockquote {
 	margin: 0;
 	padding: 1rem;
 	//font-style: italic;
-	border: 0px solid $color__text-main;
+	border: 0px solid $color__brand-orange;
 	border-left-width: 4px;
 
 	&[style="text-align:right"] {
@@ -29,7 +29,7 @@ blockquote {
 	}
 
 	.has-blue-background-color & {
-		border-color: $color__text-negative;
+	//	border-color: $color__text-negative;
 	}
 }
 

@@ -468,7 +468,7 @@ dfn, cite, em, i {
 blockquote {
   margin: 0;
   padding: 1rem;
-  border: 0px solid #000000;
+  border: 0px solid #F9A870;
   border-left-width: 4px; }
   blockquote[style="text-align:right"] {
     border-left-width: 0px;
@@ -477,8 +477,6 @@ blockquote {
     margin: 0; }
   blockquote p + p {
     margin-top: 1rem; }
-  .has-blue-background-color blockquote {
-    border-color: #FFFFFF; }
 
 address {
   margin: 0 0 1.5em; }
