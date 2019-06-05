@@ -142,13 +142,14 @@
 	& .entry-header {
 		background-color: transparent;
 		margin: 61px auto 2rem auto;
+		color: $color__text-main;
 
 		@media screen and (min-width: 600px) {
+			background-color: $color__brand-blue;
+			color: $color__text-negative;
 			margin-bottom: 2rem;
 			margin-top: 78px;
 			height: 60vh;
-			width: 90%;
-			max-width: 90rem;
 			display: flex;
 			align-items: center;
 		}
@@ -165,12 +166,25 @@
 				height: 60vh;
 				width: calc(50% - 2rem);
 				position: absolute;
-				right: 1rem;
+				right: 0;
+
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: linear-gradient(90deg, rgb(11, 56, 97) 0%, rgba(255, 255, 255, 0) 50%);
+				}
 			}
 		}
 		& .entry-header_text {
 			@media screen and (min-width: 600px) {
-				width: calc(50% - 1rem);
+				width: 90%;
+				max-width: calc(90rem + 2rem);
+				margin: 0 auto;
 			}
 		}
 
@@ -178,9 +192,7 @@
 			margin-top: 1rem;
 			margin-bottom: 1rem;
 			margin-left: 0;
-			/*font-weight: 800;*/
-			/*color: $color__brand-orange;*/
-			/*font-style: italic;*/
+			max-width: 43rem;
 
 			& a:visited {
 				color: $color__brand-orange;
@@ -194,8 +206,8 @@
 		& .entry-title {
 			margin-top: 0;
 			margin-bottom: 0;
+			max-width: 43rem;
 			color: $color__text-main;
-			/*font-weight: 800;*/
 
 			&:before {
 				content: none;
@@ -204,11 +216,10 @@
 			@media screen and (min-width: 600px) {				
 				margin-left: 0;
 				font-size: 3rem;
+				color: $color__text-negative;
 			}
 		}
 	}
-
-
 
 	& .post h2,
 	& .post h3,
@@ -220,7 +231,6 @@
 			position: relative;
 			margin-top: 2em;
 			max-width: 42rem;
-			/*float: left;*/
 
 			&:before {
 				content: none;
@@ -244,9 +254,7 @@
 			margin-right: auto;
 
 			@media screen and (min-width: 600px) {
-				/*width: 66.6%;*/
 				max-width: 42rem;
-				/*margin-left: 33.3%;*/
 			}
 		}
 		
@@ -260,23 +268,17 @@
 		}
 	}
 
-	& .entry-content > p:first-child,
-	& h2 + p { 
-		/* &:first-letter {
-			float: left;
-			font-size: 6rem;
-			height: 6rem;
-			line-height: 6rem;
-			padding: 4px 0 0 0;
-			margin:0;
-			//position: relative;
+	& .entry-content > p:first-child { 
+		 &:first-letter {
 			font-size:500%;
-				margin:8px 0 -5px 0;
-				padding:0 .1em 0 0;
-				height:.7em;
-				line-height:.85em;
-				float:left;
-		} */
+			font-weight: 800;
+			margin:6px 0 -5px -5px;
+			padding:0 .1em 0 0;
+			height:.7em;
+			line-height:.85em;
+			float:left;
+			color: #333;
+		} 
 	}
 
 	& h2 + p,
