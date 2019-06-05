@@ -9,7 +9,28 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 0;
+	padding: 1rem;
+	//font-style: italic;
+	border: 0px solid $color__text-main;
+	border-left-width: 4px;
+
+	&[style="text-align:right"] {
+		border-left-width: 0px;
+		border-right-width: 4px;
+	}
+
+	& p {
+		margin: 0;
+	}
+
+	& p + p {
+		margin-top: 1rem;
+	}
+
+	.has-blue-background-color & {
+		border-color: $color__text-negative;
+	}
 }
 
 address {

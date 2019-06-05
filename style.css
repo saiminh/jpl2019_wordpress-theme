@@ -43,7 +43,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,800");
+@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,800,800i");
 .has-blue-color {
   color: #0B3861; }
 
@@ -466,7 +466,19 @@ dfn, cite, em, i {
   font-style: italic; }
 
 blockquote {
-  margin: 0 1.5em; }
+  margin: 0;
+  padding: 1rem;
+  border: 0px solid #000000;
+  border-left-width: 4px; }
+  blockquote[style="text-align:right"] {
+    border-left-width: 0px;
+    border-right-width: 4px; }
+  blockquote p {
+    margin: 0; }
+  blockquote p + p {
+    margin-top: 1rem; }
+  .has-blue-background-color blockquote {
+    border-color: #FFFFFF; }
 
 address {
   margin: 0 0 1.5em; }
