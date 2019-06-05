@@ -473,6 +473,11 @@ blockquote {
   blockquote[style="text-align:right"] {
     border-left-width: 0px;
     border-right-width: 4px; }
+    @media (max-width: 599px) {
+      blockquote[style="text-align:right"] {
+        text-align: left !important;
+        border-left-width: 4px;
+        border-right-width: 0px; } }
   blockquote p {
     margin: 0; }
   blockquote p + p {

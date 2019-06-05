@@ -18,6 +18,12 @@ blockquote {
 	&[style="text-align:right"] {
 		border-left-width: 0px;
 		border-right-width: 4px;
+
+		@media (max-width: 599px) {
+			text-align: left!important;
+			border-left-width: 4px;
+			border-right-width: 0px;
+		}
 	}
 
 	& p {
@@ -26,10 +32,6 @@ blockquote {
 
 	& p + p {
 		margin-top: 1rem;
-	}
-
-	.has-blue-background-color & {
-	//	border-color: $color__text-negative;
 	}
 }
 
