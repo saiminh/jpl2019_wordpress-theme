@@ -1179,14 +1179,14 @@ h5 + .wp-block-columns:not(.columns-content-vertically-centered) {
   .single .entry-header .entry-title {
     margin-top: 0;
     margin-bottom: 0;
-    max-width: 50%;
     color: #000000; }
     .single .entry-header .entry-title:before {
       content: none; }
     @media screen and (min-width: 600px) {
       .single .entry-header .entry-title {
+        max-width: 50%;
         margin-left: 0;
-        font-size: 3rem;
+        font-size: 2.4em;
         color: #FFFFFF; } }
 .single .post h2, .single .post h3, .single .post h4, .single .post h5 {
   width: 100%; }
