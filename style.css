@@ -1164,7 +1164,7 @@ h5 + .wp-block-columns:not(.columns-content-vertically-centered) {
   @media screen and (min-width: 600px) {
     .single .entry-header .entry-header_text {
       width: 90%;
-      max-width: calc(90rem + 2rem);
+      max-width: 90rem;
       margin: 0 auto; } }
   .single .entry-header .entry-meta {
     margin-top: 1rem;
@@ -1179,7 +1179,7 @@ h5 + .wp-block-columns:not(.columns-content-vertically-centered) {
   .single .entry-header .entry-title {
     margin-top: 0;
     margin-bottom: 0;
-    max-width: 43rem;
+    max-width: 50%;
     color: #000000; }
     .single .entry-header .entry-title:before {
       content: none; }
