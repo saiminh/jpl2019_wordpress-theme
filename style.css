@@ -459,7 +459,8 @@ h6 {
 p {
   margin-bottom: 1.5em;
   padding: 0;
-  max-width: 44rem; }
+  max-width: 44rem;
+  line-height: 1.55; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -1205,7 +1206,8 @@ h5 + .wp-block-columns:not(.columns-content-vertically-centered) {
 .single .entry-content > p, .single .entry-content > ul, .single .entry-content > ol {
   width: 100%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  line-height: 1.55; }
   @media screen and (min-width: 600px) {
     .single .entry-content > p, .single .entry-content > ul, .single .entry-content > ol {
       max-width: 42rem; } }
@@ -1215,12 +1217,12 @@ h5 + .wp-block-columns:not(.columns-content-vertically-centered) {
   .single .entry-content .wp-block-image img {
     width: 100%; }
 .single .entry-content > p:first-child:first-letter {
-  font-size: 500%;
+  font-size: 510%;
   font-weight: 800;
-  margin: 6px 0 -5px -5px;
+  margin: 7px 0 -3px -5px;
   padding: 0 .1em 0 0;
   height: .7em;
-  line-height: .85em;
+  line-height: .82em;
   float: left;
   color: #333; }
 @media screen and (min-width: 600px) {
